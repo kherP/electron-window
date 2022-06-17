@@ -11,7 +11,7 @@
  */
 
 import React, { useEffect, useRef } from 'react';
-import Titlebar from './Titlebar';
+import SimpleTitlebar from './SimpleTitlebar';
 import logo from '@assets/images/logo.png';
 
 type Props = {
@@ -48,9 +48,8 @@ const WindowFrame: React.FC<Props> = (props) => {
       {/* Reference creator */}
       <div className='start-electron-window' ref={itsRef}></div>
       {/* Window Titlebar */}
-      <Titlebar
+      <SimpleTitlebar
         title={props.title ?? 'Electron Window'}
-        mode='centered-title'
         icon={logo}
       />
       {/* Window Content (Application to render) */}
